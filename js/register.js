@@ -257,3 +257,47 @@ function addOptions(select, options) {
         }));
     });
 }
+
+// 근무 이력 테이블 추가
+function addWorking() {
+    var schoolName = $("#historySchoolName").val();
+    var startDT = $("#historyStartDT").val();
+    var endDT = $("#historyEndDT").val();
+    var sportsNo = $("#historySportsNo").val();
+
+    var row = '<tr>';
+    row += '<td><input type="text" name="schoolName" value="' + schoolName + '" /></td>';
+    row += '<td><input type="date" name="startDT" value="' + startDT + '" ></td>';
+    row += '<td><input type="date" name="endDT" value="' + endDT + '" ></td>';
+    row += '<td><select name="sportsNo"><option value="' + sportsNo + '">' + $("#historySportsNo option:selected").text() + '</option></select></td>';
+    row += '<td><input type="button" class="btn btn-sm minus-btn" value="삭제" onclick="Item_Remove(this)"/></td></tr>';
+
+    $("#history_table tbody").append(row);
+
+    $("#historySchoolName").val('');
+    $("#historyStartDT").val('');
+    $("#historyEndDT").val('');
+    $("#historySportsNo").val('');
+}
+
+// 자격사항 테이블 추가
+function addCertificate() {
+    var certificateName = $("#certificateName").val();
+    var certificateNumber = $("#certificateNumber").val();
+    var certificateDT = $("#certificateDT").val();
+    var organization = $("#organization").val();
+
+    var row = '<tr>';
+    row += '<td><input type="text" name="CertificateName" value="' + certificateName + '" ></td>';
+    row += '<td><input type="text" name="CertificateNumber" value="' + certificateNumber + '" ></td>';
+    row += '<td><input type="date" name="CertificateDT" value="' + certificateDT + '" ></td>';
+    row += '<td><input type="test" name="organization" value="' + organization + '" readonly></td>';
+    row += '<td><input type="button" value="삭제" onclick="Item_Remove(this)"/></td></tr>';
+
+    $("#certificateName").val('');
+    $("#certificateNumber").val('');
+    $("#certificateDT").val('');
+    $("#organization").val('');
+
+    $("#certificate_table").append(row);
+};
