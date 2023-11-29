@@ -99,7 +99,7 @@ function btnLeaderDetail(element) {
 
     $.ajax({
         type: "GET",
-        url: "../layouts/leaderDeatail.html",
+        url: "../layouts/leaderDetail.html",
         data: { leaderNo: leaderNo },
         dataType: "html",
         success: function (data) {
