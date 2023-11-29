@@ -1,0 +1,82 @@
+h4 {
+    margin: 39px 0 60px 72px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #212529;
+}
+
+hr {
+    width: 436px;
+    margin: 9px auto;
+    border-bottom: 1px solid #0F2D6A;
+}
+
+p {
+    font-weight: 700;
+    font-size: 14px;
+    color: #2C2C2C;
+}
+
+.infoTable {
+    width: 1200px;
+    height: 52px;
+    text-align: center;
+    margin-left: 40px;
+    border-collapse: collapse;
+}
+
+.infoTable>thead>tr>th {
+    width: 25%;
+    border-top: 2px solid #EEEEEE;
+    border-bottom: 2px solid #EEEEEE;
+    background-color: #FBFBFB;
+    font-weight: 500;
+    color: #5B5B5B;
+}
+
+.infoTable>thead {
+    height: 52px;
+}
+
+.infoTable>tbody>tr>td {
+    height: 51px;
+    border-bottom: 1px solid #EEEEEE;
+    font-weight: 700;
+    font-size: 14px;
+    color: #2C2C2C;
+    
+}
+
+.profile__imageArea .profile__imageLabelInfo>p {
+    position: relative;
+    width: 203px;
+    height: 47px;
+    margin: 0 auto;
+    padding-top: 12px;
+    bottom: 60px;
+    text-align: center;
+    border: 1px solid #0F2D6A;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    color: #0F2D6A;
+}
+
+.labelLine {
+    width: 282px;
+    margin: 9px auto;
+    border-bottom: 1px solid #0F2D6A;
+}
+
+.requiredFields {
+    float: right;
+    margin-right: 33px;
+    margin-top: 33px;
+    font-size: 14px;
+    color: #DD4B39;
+}
+
+.profileInfo__inner{
+    display: flex;
+}
