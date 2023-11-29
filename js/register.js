@@ -1,3 +1,7 @@
+$(document).ready(function () {
+    getSports();
+});
+
 // 이미지 크기 검사
 const fileInput = document.getElementById("input-image");
 const selectedImage = document.getElementById("img");
@@ -229,4 +233,27 @@ function noSelectedSchool() {
     } else {
         openShortModal('선택된 학교 없음', '선택된 학교명이 없습니다. 학교명을 선택해주시기 바랍니다.');
     }
+}
+
+// 종목 추가
+function getSports() {
+    $.ajax({
+        type: "GET",
+        contentType: "application/json; charset=utf-8",
+        url: "https://jbeteacherstytem-dev.azurewebsites.net/api/sports",
+        dataType: "json",
+        success: function (res) {
+            addOptions($('[name=sportsNo]'), res);
+        }
+    });
+}
+
+// select 요소 추가
+function addOptions(select, options) {
+    $.each(options, function (index, value) {
+        select.append($('<option>', {
+            value: value.sportsNo,
+            text: value.sportsName
+        }));
+    });
 }
