@@ -258,3 +258,44 @@ function setupDropdownMenu() {
         }
     });
 }
+// 페이지네이션
+var currentPage = 1;
+var itemsPerPage = 10;
+var totalPages;
+
+function calculateTotalPages(totalItems, itemsPerPage) {
+    return Math.ceil(totalItems / itemsPerPage);
+}
+
+function goToFirstPage() {
+    if (currentPage !== 1) {
+        currentPage = 1;
+        allLeaderList();
+    }
+}
+
+function goToPrevPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        allLeaderList();
+    }
+}
+
+function goToPage(pageNumber) {
+    currentPage = pageNumber;
+    allLeaderList();
+}
+
+function goToNextPage() {
+    if (currentPage < totalPages) {
+        currentPage++;
+        allLeaderList();
+    }
+}
+
+function goToLastPage() {
+    if (currentPage !== totalPages) {
+        currentPage = totalPages;
+        allLeaderList();
+    }
+}
