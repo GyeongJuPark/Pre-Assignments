@@ -1,0 +1,420 @@
+.inner {
+    width: 1280px;
+    height: 1253px;
+    margin: 0 auto;
+    border: 2px solid #EEEEEE;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+}
+
+.container>p {
+    padding: 0;
+    margin: 0;
+}
+
+/* 1. 일반 현황 */
+.profile>p {
+    margin: 43px 0 21px 40px;
+    font-weight: 500;
+    font-size: 24px;
+    color: #111111;
+}
+
+.profile .profile__image {
+    margin-left: 40px;
+}
+
+.profile img {
+    width: 244px;
+    height: 290px;
+    border: 1px solid #BDBDBD;
+    border-radius: 10px;
+    background-color: #F2F4F5;
+}
+
+.profile .profile__imageArea {
+    width: 244px;
+    height: 289px;
+    margin-bottom: 7px;
+    border: 1px solid #BDBDBD;
+    border-radius: 10px;
+    background-color: #F2F4F5;
+}
+
+.profile .profile__image>p {
+    font-weight: 500;
+    font-size: 14px;
+    color: #DD4B39;
+}
+
+.profile .profile__imageArea .profile__imageLabel>p {
+    position: relative;
+    width: 203px;
+    height: 47px;
+    margin: 0 auto;
+    padding-top: 12px;
+    left: 20px;
+    bottom: 60px;
+    text-align: center;
+    border: 1px solid #0F2D6A;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    color: #0F2D6A;
+}
+
+.profile__inner {
+    display: flex;
+}
+
+.profile__inner p {
+    font-weight: 500;
+    font-size: 15px;
+    color: #2C2C2C;
+}
+
+.leaderInfo .form-group {
+    display: flex;
+    margin-left: 61px;
+}
+
+.input__second .form-group {
+    display: flex;
+    margin-left: 61px;
+    margin-top: 39px;
+
+}
+
+.form-group .input__school {
+    margin-left: 24px;
+}
+
+.form-group .input__birthday, .input__tel {
+    padding: 0 41px;
+}
+
+
+.leaderInfo .form-group input[type="text"] {
+    width: 435px;
+    height: 43px;
+    margin-top: 9px;
+    padding-left: 15px;
+    border: 1px solid #DDDDDD;
+    outline: 0;
+    border-radius: 5px;
+}
+
+.leaderInfo .form-group button {
+    width: 104px;
+    height: 43px;
+    margin-top: 9px;
+    margin-left: -100px;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 500;
+    background-color: #238AF7;
+    color: #FFFFFF;
+}
+
+.input__second .form-group input[type="text"], input[type="date"], select {
+    width: 282px;
+    height: 43px;
+    margin-top: 9px;
+    padding-left: 15px;
+    border: 1px solid #DDDDDD;
+    outline: 0;
+    border-radius: 5px;
+}
+
+.input__second .form-group input[type="tel"] {
+    width: 69px;
+    height: 43px;
+    margin-top: 9px;
+    padding-left: 15px;
+    border: 1px solid #DDDDDD;
+    outline: 0;
+    border-radius: 5px;
+}
+
+.input__second .form-group input[type="tel"]:nth-child(3),
+input[type="tel"]:nth-child(4) {
+    width: 84px;
+    height: 43px;
+    margin-top: 9px;
+    padding-left: 15px;
+    border: 1px solid #DDDDDD;
+    outline: 0;
+    border-radius: 5px;
+}
+
+.input__second .form-group .input__gender>p {
+    margin-bottom: 20px;
+}
+
+.input__second .form-group input[type='radio'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 1px solid #DDDDDD;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+}
+
+.input__second .form-group input[type='radio']:checked {
+    background-color: #0F2D6A;
+    border: 3px solid #FFFFFF;
+    box-shadow: 0 0 0 1px #0F2D6A;
+}
+
+/* 2. 근무이력 */
+.workHistory>p {
+    margin: 43px 0 21px 40px;
+    font-weight: 500;
+    font-size: 24px;
+    color: #111111;
+}
+
+.workHistory .workHistory__info>p {
+    margin-left: 39px;
+    padding-top: 19px;
+    padding-bottom: 13px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #0F2D6A;
+}
+
+.workHistory .workHistory__info input[type="button"] {
+    width: 56px;
+    height: 43px;
+    margin-top: 9px;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 500;
+    background-color: #238AF7;
+    color: #FFFFFF;
+}
+
+/* 3. 자격사항 */
+.certificate>p {
+    margin: 43px 0 21px 40px;
+    font-weight: 500;
+    font-size: 24px;
+    color: #111111;
+}
+
+.certificate .certificate__info input[type="button"] {
+    width: 56px;
+    height: 43px;
+    margin-top: 9px;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 500;
+    background-color: #238AF7;
+    color: #FFFFFF;
+}
+
+.requiredFields {
+    float: right;
+    margin-right: 35px;
+    margin-top: 38px;
+    font-size: 14px;
+    color: #DD4B39;
+}
+
+.division-line {
+    width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    border-top: 2px solid #238fb7;
+}
+
+/* 테이블 */
+.t>tbody>tr>td>input {
+    width: 264px;
+    height: 44px;
+    margin: 11px 12px;
+    padding: 11px;
+    border: 1px solid #DBDBDB;
+    border-radius: 5px;
+}
+
+.t>tbody>tr>td {
+    color: #222222;
+}
+
+.t>tbody>tr>td>button {
+    width: 56px;
+    height: 44px;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 500px;
+    background-color: #238AF7;
+    color: #FFFFFF;
+}
+
+.t {
+    text-align: center;
+    margin-left: 40px;
+    border-collapse: collapse;
+}
+
+.t>thead>tr>th {
+    border-top: 2px solid #EEEEEE;
+    border-bottom: 2px solid #EEEEEE;
+    background-color: #FBFBFB;
+    font-weight: 500;
+    color: #2C2C2C;
+}
+
+.t>thead {
+    height: 52px;
+}
+
+.t>tbody>tr>td {
+    height: 51px;
+    border-bottom: 1px solid #EEEEEE;
+    color: #212529;
+}
+
+/* 취소하기, 등록하기 */
+.buttons {
+    display: block;
+    margin-top: 68px;
+    text-align: center;
+}
+
+.buttons>button {
+    width: 140px;
+    height: 56px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.buttons .cancel_btn {
+    margin-right: 8px;
+    border: 1px solid #0F2D6A;
+    background-color: #FFFFFF;
+    color: #0F2D6A;
+}
+
+.buttons .signup_btn {
+    border: 0;
+    background-color: #0F2D6A;
+    color: #FFFFFF;
+}
+
+sup {
+    color: #DD4B39;
+}
+
+
+select option[value=""][disabled] {
+    display: none;
+}
+
+/* 모달 */
+.modal-dialog.modal-searchList {
+    width: 560px;
+    height: 980px;
+}
+
+.modal-title {
+    margin-left: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #0F2D6A;
+}
+
+#table-container {
+    max-height: 531px;
+    overflow-y: auto;
+}
+
+#largeModal label {
+    margin-left: 40px;
+}
+
+#largeModal table {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 15px;
+    border-collapse: collapse;
+
+}
+
+#largeModal input {
+    width: 284px;
+    height: 44px;
+    padding-left: 16px;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+}
+
+#largeModal .buttons-container>button {
+    width: 140px;
+    height: 56px;
+    border-radius: 5px;
+}
+
+#largeModal .buttons-container {
+    margin-top: 40px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+#largeModal .search_btn {
+    width: 84px;
+    height: 44px;
+    border: 1px solid #0F2D6A;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    color: #0F2D6A;
+}
+
+#largeModal .cancel_btn {
+    border: 1px solid #0F2D6A;
+    background-color: #FFFFFF;
+    color: #0F2D6A;
+}
+
+#largeModal .add_btn {
+    border: 0;
+    background-color: #0F2D6A;
+    color: #FFFFFF;
+}
+
+#shortModal .modal-body {
+    height: 254px;
+    text-align: center;
+}
+
+#shortModal .modal-body>input[type="button"] {
+    width: 88px;
+    height: 42px;
+    border-radius: 5px;
+    background-color: #0F2D6A;
+    color: #FFFFFF;
+}
+
+.selected-row {
+    background-color: #F9F9F9 !important;
+}
+
+
+input[type="date"]::before {
+    content: attr(data-placeholder);
+    width: 100%;
+    color: #757575;
+}
+
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+    display: none;
+}
+

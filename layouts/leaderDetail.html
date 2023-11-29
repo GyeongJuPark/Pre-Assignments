@@ -1,0 +1,137 @@
+<div class="container">
+    <h4>지도자 상세정보</h4>
+    <div class="inner">
+        <div class="profile">
+            <p>1. 일반 현황(2023년 01월 01일 기준)<small class="requiredFields">* 필수입력값 항목입니다.</small></p>
+            <div class="division-line"></div>
+            <div class="profileInfo__inner">
+                <div class="profile__image">
+                    <div class="profile__imageArea">
+                        <img id="leaderImage" />
+                        <label class="profile__imageLabelInfo" for="input-image">
+                            <p>사진 첨부하기</p>
+                        </label>
+                        <input type="file" id="input-image" style="display: none" />
+                    </div>
+                    <p>파일 크기는 MB 이하로 등록해주세요.</p>
+                </div>
+
+                <div class="input-wrap">
+
+                    <div class="leaderInfo">
+                        <div class="form-group">
+                            <div class="input__code">
+                                <label>식별코드</label>
+                                <hr>
+                                <p id="leaderNo"></p>
+                            </div>
+                            <div class="input__school">
+                                <label>학교명</label>
+                                <hr>
+                                <p id="schoolName"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input__second">
+                        <div class="form-group">
+                            <div class="input__name">
+                                <label>성명</label>
+                                <hr class="labelLine">
+                                <p id="leaderName"></p>
+                            </div>
+                            <div class="input__date-of-birth">
+                                <label>생년월일</label>
+                                <hr class="labelLine">
+                                <p id="birthday"></p>
+                            </div>
+                            <div class="input__gender">
+                                <label>성별</label>
+                                <hr class="labelLine">
+                                <p id="gender"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input__second">
+                        <div class="form-group">
+                            <div class="input__sports">
+                                <label>종목</label>
+                                <hr class="labelLine">
+                                <p id="sports"></p>
+                            </div>
+                            <div class="input__tel">
+                                <label>근무지 전화번호</label>
+                                <hr class="labelLine">
+                                <p id="telNo"></p>
+                            </div>
+                            <div>
+                                <label>최초채용</label>
+                                <hr class="labelLine">
+                                <p id="empDT"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="workHistory">
+                <p>2. 근무 이력(전라북도교육청 소속 - 최초 채용일로부터)<small class="requiredFields">* 필수입력값 항목입니다.</small></p>
+                <div class="division-line"></div>
+                <div class="workHistory__info">
+                    <p>
+                        &#8251; 현재 근무 중인 경우 근무 종료일을 입력하지 마십시오.
+                    </p>
+                    <table id="historyInfo_table" class="infoTable">
+                        <thead>
+                            <tr>
+                                <th scope="col">근무기관</th>
+                                <th scope="col">근무시작일</th>
+                                <th scope="col">근무종료일</th>
+                                <th scope="col">종목</th>
+                            </tr>
+                        </thead>
+                        <tbody id="historyInfoTableBody">
+                            <tr>
+                                <td id="historySchoolName"></td>
+                                <td id="historyStartDT"></td>
+                                <td id="historyEndDT"></td>
+                                <td id="historySports"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="certificate">
+                <p>3. 자격사항<small class="requiredFields">* 필수입력값 항목입니다.</small></p>
+                <div class="division-line"></div>
+                <div class="certificate__info">
+                    <table id="certificate_table" class="infoTable">
+                        <thead>
+                            <tr>
+                                <th scope="col">자격/면허</th>
+                                <th scope="col">자격번호</th>
+                                <th scope="col">취득일자</th>
+                                <th scope="col">발급기관</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="certificateInfoTableBody">
+                            <tr>
+                                <td id="certificateName"></td>
+                                <td id="certificateNumber"></td>
+                                <td id="certificateDT"></td>
+                                <td id="organization"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="toList" type="button">목록으로</button>
+            <button id="lSubmit" class="signup_btn" type="button">수정하기</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+aside {
+    float: left;
+    width: 200px;
+    height: 640px;
+    border-right: 1px solid #EEEEEE;
+    background-color: #FFFFFF;
+}
+
+aside > button {
+    width: 161px;
+    height: 56px;
+    margin: 25px 20px;
+    border: 1px solid #0F2D6A;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    font-weight: 700;
+    font-size: 16px;
+    color: #0F2D6A;
+}
+
+aside > button > img {
+    margin-right: 20px;
+}

@@ -1,0 +1,50 @@
+<section class="leader_management">
+    <p>지도자 관리</p>
+
+    <div class="search">
+        <p>검색 조회</p>
+        <div class="cont-select">
+            <button class="btn-select">전체</button>
+            <ul class="list-member">
+                <li><button type="button">전체</button></li>
+                <li><button type="button">이름</button></li>
+                <li><button type="button">종목</button></li>
+            </ul>
+        </div>
+        <input id="searchInput" type="text" placeholder="이름을 입력해주세요." />
+        <button type="submit" id="searchButton" onclick="searchInput()">검색하기</button>
+    </div>
+
+    <div class="allLeaderList">
+        <p>전체 지도자 목록<sub></sub></p>
+        <button class="btnDeleteLeader" type="button" onclick="btnDeleteSelectedLeaders()">삭제하기</button>
+        <button class="add_leader" type="button" onclick="loadLeaderRegister()">지도자 등록하기</button>
+
+        <table id="leaderListTable">
+            <thead>
+                <tr>
+                    <th scope="col"><input type="checkbox" id="selectAll" onchange="toggleAllCheckboxes()"></th>
+                    <th scope="col">번호</th>
+                    <th scope="col">식별코드</th>
+                    <th scope="col">이름</th>
+                    <th scope="col">종목</th>
+                    <th scope="col">소속학교</th>
+                    <th scope="col">이력 정보 상세</th>
+                </tr>
+            </thead>
+            <tbody id="leaderListTableBody"></tbody>
+        </table>
+        <div class="pagination">
+            <button onclick="goToFirstPage()">&lt;</button>
+            <button onclick="goToPrevPage()">&lt;</button>
+            <button onclick="goToPage(1)"></button>
+            <button onclick="goToPage(2)"></button>
+            <button onclick="goToNextPage()">&gt;</button>
+            <button onclick="goToLastPage()">&gt;</button>
+        </div>
+
+    </div>
+
+
+</section>
+<script src="../js/main.js"></script>
