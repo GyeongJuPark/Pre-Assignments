@@ -1,0 +1,28 @@
+.header__inner {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.header__logo {
+    margin: 20px 35px 25px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 340px;
+    height: 36px;
+    margin-left: 60px;
+    border-radius: 5px;
+    background-color: #203883;
+}
+
+.nav > h4 {
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    color: #FFFFFF
+}
