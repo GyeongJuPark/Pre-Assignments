@@ -1,0 +1,289 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Pretendard-Regular';
+    font-style: normal;
+}
+
+body {
+    width: 1600px;
+    height: 1660px;
+}
+
+/* select 커스텀 */
+.cont-select {
+    width: 179px;
+    position: relative;
+}
+
+.btn-select {
+    width: 100%;
+    height: 36px;
+    font-size: 12px;
+    border: 1px solid #DDDDDD;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-left: 38px;
+    padding-left: 12px;
+    cursor: pointer;
+    text-align: left;
+    background: url("../images/selectArrow.png") center right 14px no-repeat;
+}
+
+.list-member {
+    margin-left: 38px;
+    list-style-type: none;
+    display: none;
+    margin-top: 4px;
+    padding: 0;
+    border: 1px solid #DDDDDD;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.btn-select.on+.list-member {
+    display: block;
+}
+
+.list-member li button {
+    width: 100%;
+    height: 36px;
+    padding-left: 12px;
+    border: none;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    text-align: left;
+}
+
+.list-member li button:hover,
+.list-member li button:focus {
+    background-color: #EEEEEE;
+}
+
+.leader_management {
+    height: 1196px;
+    overflow: hidden;
+    background-color: #FBFBFB;
+}
+
+.leader_management>p {
+    margin-top: 39px;
+    margin-bottom: 60px;
+    margin-left: 61px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #212529;
+}
+
+
+
+/* 검색 조회 */
+.search {
+    display: flex;
+    align-items: center;
+    width: 1280px;
+    height: 84px;
+    margin: 0 auto 16px;
+    border: 2px solid #EEEEEE;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    font-size: 16px;
+}
+
+.search>p {
+    margin-left: 44px;
+    font-weight: 500;
+}
+
+.search>select {
+    width: 180px;
+    height: 36px;
+    margin-left: 38px;
+    padding-left: 9px;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+    font-weight: 500;
+    color: #212529;
+}
+
+.search>input {
+    position: relative;
+    width: 220px;
+    height: 36px;
+    left: 50px;
+    padding-left: 12px;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+}
+
+.search>button {
+    position: relative;
+    width: 88px;
+    height: 36px;
+    left: 70px;
+    border: 1px solid #0F2D6A;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    font-weight: 500;
+    color: #0F2D6A
+}
+
+.search>button:hover {
+    background-color: #0F2D6A;
+    color: #FFFFFF;
+}
+
+.allLeaderList {
+    width: 1280px;
+    height: 751px;
+    margin: 0 auto;
+    border: 2px solid #EEEEEE;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+.allLeaderList>p {
+    float: left;
+    margin-left: 40px;
+    margin-top: 35px;
+    margin-bottom: 13px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #222222;
+}
+
+.allLeaderList>p>sub {
+    margin-left: 5px;
+    font-size: 13px;
+    line-height: 16px;
+    color: #5B5B5B;
+}
+
+.allLeaderList>button {
+    float: right;
+    width: 130px;
+    height: 36px;
+    margin-left: 12px;
+    margin-top: 12px;
+    border-radius: 5px;
+}
+
+/* 등록하기 버튼 */
+.allLeaderList .add_leader {
+    border: 0;
+    background-color: #0F2D6A;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.allLeaderList .add_leader:hover {
+    border: 1px solid #0F2D6A;
+    background-color: #FFFFFF;
+    color: #0F2D6A;
+}
+
+/* 삭제하기 */
+.btnDeleteLeader {
+    margin-right: 40px;
+    border: 1px solid #DDDDDD;
+    background-color: #F5F5F5;
+    font-weight: 500;
+    color: #BDBDBD;
+    cursor: not-allowed;
+}
+
+.btnDeleteLeader.active {
+    border: 0;
+    background-color: #FFE0DF;
+    color: #DD4B39;
+    cursor: pointer;
+}
+
+
+/* 테이블 */
+#leaderListTable {
+    width: 1200px;
+    height: 52px;
+    text-align: center;
+    margin-left: 40px;
+    border-collapse: collapse;
+}
+
+#leaderListTable>thead>tr>th {
+    border-top: 2px solid #EEEEEE;
+    border-bottom: 2px solid #EEEEEE;
+    background-color: #FBFBFB;
+    font-weight: 500;
+    color: #5B5B5B;
+}
+
+#leaderListTable>thead {
+    height: 52px;
+}
+
+#leaderListTable>tbody>tr>td {
+    height: 51px;
+    border-bottom: 1px solid #EEEEEE;
+    font-weight: 500;
+    font-size: 14px;
+    color: #2C2C2C;
+}
+
+/* 체크박스 */
+#leaderListTable>tbody>tr>td>input[type="checkbox"] {
+    width: 13px;
+    height: 13px;
+    margin: 0 auto;
+}
+
+/* 상세보기 */
+#leaderListTable>tbody>tr>td>input[type="button"] {
+    width: 88px;
+    height: 36px;
+    border-radius: 5px;
+    background-color: #F2F4F5;
+    color: #0F2D6A;
+}
+
+#leaderListTable>tbody>tr>td>input[type="button"]:hover {
+    background-color: #0F2D6A;
+    color: #FFFFFF;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination button {
+    width: 32px;
+    height: 32px;
+    margin: 0 5px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.pagination button[disabled] {
+    cursor: not-allowed;
+    background-color: #F5F5F5;
+    color: #BDBDBD;
+}
+
+.pagination button.active,
+.pagination button:hover {
+    background-color: #0F2D6A;
+    color: #FFFFFF;
+}
