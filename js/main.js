@@ -299,3 +299,20 @@ function goToLastPage() {
         allLeaderList();
     }
 }
+
+function updatePaginationButtons() {
+    $(".pagination button").remove();
+    $(".pagination").append("<button onclick='goToFirstPage()'></button>");
+    $(".pagination").append("<button onclick='goToPrevPage()'><img src='../images/leftArrow.png' alt='Previous'></button>");
+
+    for (var i = 1; i <= totalPages; i++) {
+        var button = $("<button onclick='goToPage(" + i + ")'>" + i + "</button>");
+        if (i === currentPage) {
+            button.addClass("active");
+        }
+        $(".pagination").append(button);
+    }
+
+    $(".pagination").append("<button onclick='goToNextPage()'><img src='../images/rightArrow.png' alt='Next'></button>");
+    $(".pagination").append("<button onclick='goToLastPage()'>");
+}
