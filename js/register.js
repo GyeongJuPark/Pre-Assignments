@@ -138,6 +138,26 @@ function searchSchoolList() {
     });
 }
 
+function selectRow(row) {
+    var selectedRows = $('.selected-row');
+    var clickedRow = $(row);
+
+    if (clickedRow.hasClass('selected-row')) {
+        clickedRow.removeClass('selected-row');
+    } else {
+        selectedRows.removeClass('selected-row');
+        clickedRow.addClass('selected-row');
+    }
+
+    var cells = clickedRow.find('td');
+    var rowData = {
+        번호: cells.eq(0).text(),
+        식별코드: cells.eq(1).text(),
+        이름: cells.eq(2).text()
+    };
+
+}
+
 function updateTable(data, searchType) {
     var tableBody = $('#' + (searchType === 'leaderList' ? 'leaderTableBody' : 'schoolTableBody'));
 
@@ -195,6 +215,21 @@ function noSelectedSchool() {
     } else {
         openShortModal('선택된 학교 없음', '선택된 학교명이 없습니다. 학교명을 선택해주시기 바랍니다.');
     }
+}
+
+function openShortModal(title, message) {
+    var modal = $('#shortModal');
+    modal.find('.modal-body h2').text(title);
+    modal.find('.modal-body p').text(message);
+    modal.modal('show');
+}
+
+function closeShortModal() {
+    $('#shortModal').modal('hide');
+}
+
+function Item_Remove(obj) {
+    $(obj).closest('tr').remove();
 }
 
 function cancelSchoolRegistration() {

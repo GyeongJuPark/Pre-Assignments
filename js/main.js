@@ -1,5 +1,6 @@
 $(document).ready(function () {
     allLeaderList();
+    setupDropdownMenu();
 });
 
 function loadLeaderRegister() {
@@ -135,7 +136,7 @@ function getLeaderInfoData(data) {
     $("#leaderName").text(data.leaderName);
     $("#birthday").text(data.birthday);
     $("#gender").text(data.gender);
-    $("#sports").text(data.sports);
+    $("#sportName").text(data.sportName);
     $("#telNo").text(data.telNo);
     $("#empDT").text(data.empDT);
 
