@@ -80,3 +80,14 @@ p {
 .profileInfo__inner{
     display: flex;
 }
+
+.toList:hover {
+    background-color: #0F2D6A;
+    color: #FFFFFF;
+}
+
+.signup_btn:hover {
+    border: 1px solid #0F2D6A;
+    background-color: #FFFFFF;
+    color: #0F2D6A;
+}
