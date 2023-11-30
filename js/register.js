@@ -86,6 +86,19 @@ function openSearchModal(searchType) {
     modal.modal('show');
 }
 
+function cancel_addLeader() {
+    var modal = $('#shortModal');
+    modal.find('.modal-body h2').text('지도자 등록 취소');
+    modal.find('.modal-body p').text('지도자 등록을 취소하시겠습니까?, 작성한 내용은 모두 삭제됩니다.');
+
+    var buttons = '<input class="btn btn-secondary" type="button" value="취소" onclick="closeShortModal()">';
+    buttons += '<a href="../index.html"><input class="btn btn-primary" type="button" value="확인"></a>';
+    modal.find('.modal-body .modal-buttons').html(buttons);
+
+
+    modal.modal('show');
+}
+
 function btnGetModalData(searchType) {
     var url = '';
     if (searchType === 'leaderList') {
@@ -397,6 +410,8 @@ function postLeaderData() {
         dataType: 'json',
         success: function (response) {
             console.log(response);
+            window.location.href = '../index.html'
+            allLeaderList();
         },
         error: function (error) {
             console.error(error);
