@@ -5,7 +5,7 @@ $(document).ready(function () {
 // 이미지 크기 검사
 const fileInput = document.getElementById("input-image");
 const selectedImage = document.getElementById("img");
-const maxSizeInBytes = 4 * 1024 * 1024; // 4MB
+const maxSizeInBytes = 4 * 1024 * 1024;
 let base64ImageData = null;
 
 fileInput.addEventListener("change", (event) => {
@@ -89,12 +89,11 @@ function openSearchModal(searchType) {
 function cancel_addLeader() {
     var modal = $('#shortModal');
     modal.find('.modal-body h2').text('지도자 등록 취소');
-    modal.find('.modal-body p').text('지도자 등록을 취소하시겠습니까?, 작성한 내용은 모두 삭제됩니다.');
+    modal.find('.modal-body p').html('지도자 등록을 취소하시겠습니까?<br>작성한 내용은 모두 삭제됩니다.');
 
-    var buttons = '<input class="btn btn-secondary" type="button" value="취소" onclick="closeShortModal()">';
+    var buttons = '<input class="btn btn-secondary" type="button" value="취소" onclick="closeShortModal()" style="margin-right: 8px;">';
     buttons += '<a href="../index.html"><input class="btn btn-primary" type="button" value="확인"></a>';
     modal.find('.modal-body .modal-buttons').html(buttons);
-
 
     modal.modal('show');
 }
@@ -161,14 +160,6 @@ function selectRow(row) {
         selectedRows.removeClass('selected-row');
         clickedRow.addClass('selected-row');
     }
-
-    var cells = clickedRow.find('td');
-    var rowData = {
-        번호: cells.eq(0).text(),
-        식별코드: cells.eq(1).text(),
-        이름: cells.eq(2).text()
-    };
-
 }
 
 function updateTable(data, searchType) {
@@ -197,28 +188,10 @@ function cancelSchoolRegistration() {
     modal.modal('hide');
 }
 
-function noSelectedSchool() {
-    var selectedRows = $('.selected-row');
-    var schoolName = $('#schoolName');
-    var schoolCode = $('#schoolNo');
-    var historySchoolName = $('#historySchoolName');
-
-
-    if (selectedRows.length > 0) {
-        var cells = selectedRows.find('td');
-        schoolName.val(cells.eq(1).text());
-        historySchoolName.val(cells.eq(1).text());
-        schoolCode.val(cells.eq(2).text());
-        cancelSchoolRegistration();
-    } else {
-        openShortModal('선택된 학교 없음', '선택된 학교명이 없습니다. 학교명을 선택해주시기 바랍니다.');
-    }
-}
-
 function openShortModal(title, message) {
     var modal = $('#shortModal');
     modal.find('.modal-body h2').text(title);
-    modal.find('.modal-body p').text(message);
+    modal.find('.modal-body p').html(message);
     modal.modal('show');
 }
 
@@ -246,7 +219,7 @@ function noSelectedLeader() {
         leaderName.val(cells.eq(2).text());
         cancelSchoolRegistration();
     } else {
-        openShortModal('선택된 식별코드 없음', '선택된 지도자 식별코드가 없습니다. 지도자 식별코드를 선택해주시기 바랍니다.');
+        openShortModal('선택된 식별코드 없음', '선택된 지도자 식별코드가 없습니다.<br>지도자 식별코드를 선택해주시기 바랍니다.');
     }
 }
 
@@ -264,7 +237,7 @@ function noSelectedSchool() {
         schoolCode.val(cells.eq(2).text());
         cancelSchoolRegistration();
     } else {
-        openShortModal('선택된 학교 없음', '선택된 학교명이 없습니다. 학교명을 선택해주시기 바랍니다.');
+        openShortModal('선택된 학교 없음', '선택된 학교명이 없습니다.<br>학교명을 선택해주시기 바랍니다.');
     }
 }
 
@@ -340,7 +313,7 @@ function addLeaderData() {
     if (validation()) {
         validAfterModal();
     } else {
-        openShortModal('알림', '입력값을 확인하세요.');
+        openShortModal('필수입력값 확인', '필수입력값이 채워지지 않았습니다.<br>확인 후 채워주시기 바랍니다.');
     }
 }
 
@@ -349,7 +322,7 @@ function validAfterModal() {
     modal.find('.modal-body h2').text('지도자 등록');
     modal.find('.modal-body p').text('입력한 내용으로 지도자를 등록하시겠습니까?');
 
-    var buttons = '<input class="btn btn-secondary" type="button" value="취소" onclick="closeShortModal()">';
+    var buttons = '<input class="btn btn-secondary" type="button" value="취소" onclick="closeShortModal()" style="margin-right: 8px;">';
     buttons += '<input class="btn btn-primary" type="button" onclick="postLeaderData()" value="확인">';
     modal.find('.modal-body .modal-buttons').html(buttons);
 
@@ -437,82 +410,82 @@ function validation() {
     var checkCertificateName = /^[가-힣a-zA-Z0-9]+$/;
 
     if (!checkLeaderNo.test(leaderNo)) {
-        alert("식별코드를 입력하세요.");
+        console.warn("식별코드를 입력하세요.");
         return false;
     }
 
     if (!checkSchoolNo.test(schoolNo)) {
-        alert("학교명을 입력하세요.");
+        console.warn("학교명을 입력하세요.");
         return false;
     }
 
     if (!check.test(leaderName)) {
-        alert("성명을 입력하세요.");
+        console.warn("성명을 입력하세요.");
         return false;
     }
 
     if (!checkDate.test(birthday)) {
-        alert("생년월일을 입력하세요.");
+        console.warn("생년월일을 입력하세요.");
         return false;
     }
 
     if (gender.length === 0) {
-        alert("성별을 선택하세요.");
+        console.warn("성별을 선택하세요.");
         return false;
     }
 
     if (!sportsNo) {
-        alert("종목을 선택하세요.");
+        console.warn("종목을 선택하세요.");
         return false;
     }
 
     if (!checkTelNo.test(telNo1) || !checkTelNo.test(telNo2) || !/^[0-9]{4}$/.test(telNo3)) {
-        alert("근무지 전화번호를 입력하세요.\n(올바른 전화번호 형식이 아닙니다.(063-123-4567))");
+        console.warn("근무지 전화번호를 입력하세요.\n(올바른 전화번호 형식이 아닙니다.(063-123-4567))");
         return false;
     }
 
     if (!checkDate.test(empDT)) {
-        alert("최초채용일을 선택하세요.");
+        console.warn("최초채용일을 선택하세요.");
         return false;
     }
 
     if (!check.test(historySchoolName)) {
-        alert("근무기관을 입력하세요.");
+        console.warn("근무기관을 입력하세요.");
         return false;
     }
 
     if (!checkDate.test(historyStartDT)) {
-        alert("근무시작일을 입력하세요.");
+        console.warn("근무시작일을 입력하세요.");
         return false;
     }
 
     if (!checkDate.test(historyEndDT)) {
-        alert("근무종료일을 입력하세요.");
+        console.warn("근무종료일을 입력하세요.");
         return false;
     }
 
     if (!historySportsNo) {
-        alert("근무종목을 선택하세요.");
+        console.warn("근무종목을 선택하세요.");
         return false;
     }
 
     if (!checkCertificateName.test(certificateName)) {
-        alert("자격/면허를 입력하세요.");
+        console.warn("자격/면허를 입력하세요.");
         return false;
     }
 
     if (!checkCertificateNumber.test(certificateNumber)) {
-        alert("자격번호를 입력하세요.\n(영문, 숫자만 입력해주세요.)");
+        console.warn("자격번호를 입력하세요.\n(영문, 숫자만 입력해주세요.)");
         return false;
     }
 
     if (!checkDate.test(certificateDT)) {
-        alert("취득일자를 선택하세요.");
+        console.warn("취득일자를 선택하세요.");
         return false;
     }
 
     if (!check.test(organization)) {
-        alert("발급기관을 입력하세요.");
+        console.warn("발급기관을 입력하세요.");
         return false;
     }
 

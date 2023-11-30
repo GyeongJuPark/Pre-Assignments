@@ -90,7 +90,8 @@
     margin-left: 24px;
 }
 
-.form-group .input__birthday, .input__tel {
+.form-group .input__birthday,
+.input__tel {
     padding: 0 41px;
 }
 
@@ -117,7 +118,9 @@
     color: #FFFFFF;
 }
 
-.input__second .form-group input[type="text"], input[type="date"], select {
+.input__second .form-group input[type="text"],
+input[type="date"],
+select {
     width: 282px;
     height: 43px;
     margin-top: 9px;
@@ -394,6 +397,19 @@ select option[value=""][disabled] {
     text-align: center;
 }
 
+#shortModal .modal-body>h2 {
+    font-weight: 500;
+    font-size: 24px;
+    color: #0F2D6A;
+}
+
+#shortModal .modal-body>p {
+    margin-top: 39px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #212529;
+}
+
 #shortModal .modal-body>input[type="button"] {
     width: 88px;
     height: 42px;
@@ -418,3 +434,10 @@ input[type="date"]:valid::before {
     display: none;
 }
 
+.btnOk {
+    width: 88px;
+    height: 42px;
+    border-radius: 5px;
+    background-color: #0F2D6A;
+    color: #FFFFFF;
+}
