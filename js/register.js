@@ -197,21 +197,6 @@ function cancelSchoolRegistration() {
     modal.modal('hide');
 }
 
-function noSelectedLeader() {
-    var selectedRows = $('.selected-row');
-    var leaderCode = $('#leaderNo');
-    var leaderName = $('#leaderName');
-
-    if (selectedRows.length > 0) {
-        var cells = selectedRows.find('td');
-        leaderCode.val(cells.eq(1).text());
-        leaderName.val(cells.eq(2).text());
-        cancelSchoolRegistration();
-    } else {
-        openShortModal('선택된 식별코드 없음', '선택된 지도자 식별코드가 없습니다. 지도자 식별코드를 선택해주시기 바랍니다.');
-    }
-}
-
 function noSelectedSchool() {
     var selectedRows = $('.selected-row');
     var schoolName = $('#schoolName');
