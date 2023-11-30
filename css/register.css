@@ -124,7 +124,7 @@ select {
     width: 282px;
     height: 43px;
     margin-top: 9px;
-    padding-left: 15px;
+    padding: 11px;
     border: 1px solid #DDDDDD;
     outline: 0;
     border-radius: 5px;
@@ -433,6 +433,22 @@ input[type="date"]:focus::before,
 input[type="date"]:valid::before {
     display: none;
 }
+
+/* 달력 아이콘 변경 */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+    appearance: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0); 
+    display: block;
+    background: url('../images/calender.svg') no-repeat 98% 50%;
+    width: 13px;
+    height: 13px;
+}
+
 
 .btnOk {
     width: 88px;
