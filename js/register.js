@@ -3,32 +3,33 @@ $(document).ready(function () {
 });
 
 // 이미지 크기 검사
-const fileInput = document.getElementById("input-image");
-const selectedImage = document.getElementById("img");
-const maxSizeInBytes = 4 * 1024 * 1024;
-let base64ImageData = null;
 
-fileInput.addEventListener("change", (event) => {
-    const selectedFiles = event.target.files;
+function imageSizeCheck() {
+    const fileInput = document.getElementById("input-image");
+    const selectedImage = document.getElementById("img");
+    const maxSizeInBytes = 4 * 1024 * 1024;
+    let base64ImageData = null;
+    
+    const selectedFiles = fileInput.files;
     if (selectedFiles.length > 0) {
         const [imageFile] = selectedFiles;
-
+        
         if (imageFile.size > maxSizeInBytes) {
             alert("이미지 크기는 4MB 이하이어야 합니다.");
             fileInput.value = "";
             return;
         }
         const fileReader = new FileReader();
-
+    
         fileReader.onload = () => {
             const srcData = fileReader.result;
             selectedImage.src = srcData;
-
+    
             base64ImageData = srcData.split(",")[1];
         };
         fileReader.readAsDataURL(imageFile);
     }
-});
+}
 
 // 식별코드검색, 학교명검색 모달 창
 function openSearchModal(searchType) {
