@@ -380,16 +380,32 @@ select option[value=""][disabled] {
     color: #0F2D6A;
 }
 
+#largeModal .search_btn:hover {
+    background-color: #0F2D6A;
+    color: #FFFFFF;
+}
+
 #largeModal .cancel_btn {
     border: 1px solid #0F2D6A;
     background-color: #FFFFFF;
     color: #0F2D6A;
 }
 
+#largeModal .cancel_btn:hover {
+    background-color: #0F2D6A;
+    color: #FFFFFF;
+}
+
 #largeModal .add_btn {
     border: 0;
     background-color: #0F2D6A;
     color: #FFFFFF;
+}
+
+#largeModal .add_btn:hover {
+    border: 1px solid #0F2D6A;
+    background-color: #FFFFFF;
+    color: #0F2D6A;
 }
 
 #shortModal .modal-body {
